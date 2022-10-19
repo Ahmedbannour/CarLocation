@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">CarLoc</string>
+    <string name="city">Select city</string>
 </resources>
