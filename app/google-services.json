@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "685635114401",
+    "project_id": "carlocation-14290",
+    "storage_bucket": "carlocation-14290.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:685635114401:android:c75a6561c029aa111e27e0",
+        "android_client_info": {
+          "package_name": "com.example.carloc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "685635114401-u9dquht2l2fj67401biumgp57na92u0c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAj0ACbsqgjZSsLSsQpuTlGDbKtfXKL5YE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "685635114401-u9dquht2l2fj67401biumgp57na92u0c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

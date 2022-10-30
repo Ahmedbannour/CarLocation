@@ -1,27 +1,55 @@
 package com.example.carloc;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
-import androidx.viewpager.widget.ViewPager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.carloc.Adapters.RecycleViewAdapter;
+import com.example.carloc.Models.Car;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeActivity extends AppCompatActivity {
 
-    ViewPager slider;
+    RecyclerView recyclerView;
+    LinearLayoutManager layoutManager;
+    List<Car> carList;
+    RecycleViewAdapter adapter;
+    int [] imgs;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.home_page);
-        slider = (ViewPager) findViewById(R.id.slider);
         getWindow().setStatusBarColor(ContextCompat.getColor(HomeActivity.this , R.color.black));
 
-        SlideAdapter slideAdapter = new SlideAdapter(this);
+        initData();
+        initRecyclerView();
 
-        slider.setAdapter(slideAdapter);
+
+    }
+
+    private void initData() {
+        carList = new ArrayList<>();
+        imgs = new int[]{R.drawable.slide1,R.drawable.slide2};
+        carList.add(new Car(1,imgs,"Ahmed","Car",80000));
+        carList.add(new Car(2,imgs,"BMW","Serie 2022",1700));
+        carList.add(new Car(3,imgs,"BENZ","R8",2500));
+        carList.add(new Car(4,imgs,"REUS","Model 2021",3500));
+
+    }
+
+    private void initRecyclerView() {
+        recyclerView = findViewById(R.id.carSlider);
+        layoutManager = new LinearLayoutManager(this);
+        layoutManager.setOrientation(RecyclerView.VERTICAL);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new RecycleViewAdapter(carList);
+        recyclerView.setAdapter(adapter);
     }
 
 }

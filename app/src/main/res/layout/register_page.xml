@@ -41,12 +41,12 @@
             android:textSize="40dp" />
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Username">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -55,12 +55,12 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="email">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -69,12 +69,15 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password"
+
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password">
+            android:hint="Password"
+            app:passwordToggleEnabled="true"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -84,12 +87,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/confirmPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password">
+            android:hint="Confirm Password"
+            app:passwordToggleEnabled="true"
+            >
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/confirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="5dp"
@@ -97,12 +102,6 @@
                 tools:ignore="TouchTargetSizeCheck" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:orientation="horizontal">
 
 
 
@@ -125,8 +124,22 @@
                     tools:ignore="TouchTargetSizeCheck" />
             </com.google.android.material.textfield.TextInputLayout>
 
+            <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_weight="1"
+            android:hint="select region"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            >
+            <AutoCompleteTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/country_text"
+                android:inputType="none"/>
 
-        </LinearLayout>
+        </com.google.android.material.textfield.TextInputLayout>
+
 
 
         <LinearLayout
@@ -143,8 +156,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="10dp"
+                android:fontFamily="@font/montserrat_semibold"
                 android:background="@drawable/button2"
                 android:text="Register"
+                android:id="@+id/registerButton"
                 android:textColor="#5b5b5b" />
             <LinearLayout
                 android:layout_width="match_parent"
@@ -159,6 +174,7 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
                     android:gravity="center|right"
+                    android:textColor="#2b2b2b"
                     android:text="Have an account ? " />
 
                 <Button
@@ -166,7 +182,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:gravity="left"
                     android:text="Login?"
                     android:background="?android:attr/selectableItemBackground"

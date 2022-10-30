@@ -1,130 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    tools:context=".HomeActivity"
+    >
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:orientation="horizontal"
+            android:layout_gravity="center"
             android:layout_marginVertical="10dp"
+            android:orientation="horizontal"
             android:padding="5dp">
-                <ImageView
-                    android:layout_width="30dp"
-                    android:layout_height="match_parent"
-                    android:src="@drawable/ic_baseline_menu_24" />
+
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="match_parent"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
                 android:layout_marginHorizontal="5dp"
-                android:src="@drawable/ic_baseline_search_24" />
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:gravity="right"
-                    android:orientation="horizontal">
-                    <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:padding="5dp"
-                        android:layout_marginHorizontal="5dp"
-                        android:src="@drawable/ic_baseline_settings_24"
-                        android:background="@drawable/circle_item"/>
-                </LinearLayout>
-
-        </LinearLayout>
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1">
-
-
-        <androidx.viewpager.widget.ViewPager
-            android:id="@+id/slider"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="10dp"
-            android:layout_marginBottom="10dp"
-            android:layout_weight="1"
-            android:background="@drawable/slide_item">
-
-        </androidx.viewpager.widget.ViewPager>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="vertical">
+                android:padding="10dp"
+                android:src="@drawable/filter" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:gravity="right"
                 android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/circle_white"
-                    android:src="@drawable/ic_baseline_star_border_24" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:gravity="right|center_vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:background="@drawable/circle_white"
-                        android:paddingHorizontal="20dp"
-                        android:text="hhhh"
-                        android:textAlignment="center"
-                        android:textColor="#2B2B2B" />
-                </LinearLayout>
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="5dp"
+                    android:padding="10dp"
+                    android:background="@drawable/circle_item_second"
+                    android:src="@drawable/basket" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="5"
-                android:background="@drawable/circle_white"
-                android:paddingHorizontal="20dp"
-                android:text="Model Mercedes Benz"
-                android:textAlignment="center"
-                android:textColor="#2B2B2B" />
         </LinearLayout>
-    </RelativeLayout>
 
-    <TextView
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/carSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#fff">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomNavBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="gfdgfd"
-        android:layout_weight="1"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="gfdgfd"
-        android:textColor="#000"
-        android:layout_weight="1"
-        />
+        android:layout_height="wrap_content"
+        app:fabAlignmentMode="center"
+        app:fabCradleMargin="10dp"
+        app:fabCradleRoundedCornerRadius="10dp"
+        android:gravity="center"
+        android:background="#00000000"
+        android:backgroundTint="#00000000"
+        app:fabCradleVerticalOffset="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/linearLayout"
+        tools:ignore="BottomAppBar">
 
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            app:itemIconTint="#b3b3b3"
+            android:layout_marginRight="20dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/transparent_background"
+            app:itemTextColor="#FFF"
+            app:menu="@menu/bottom_nav_bottom"
+            tools:layout_editor_absoluteX="16dp">
 
-</LinearLayout>
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+</androidx.constraintlayout.widget.ConstraintLayout>

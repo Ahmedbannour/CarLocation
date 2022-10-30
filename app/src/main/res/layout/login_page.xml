@@ -82,15 +82,17 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="123dp"
+                android:layout_width="wrap_content"
                 android:layout_height="19dp"
-                android:fontFamily="sans-serif-condensed-medium"
+                android:paddingRight="5dp"
+                android:fontFamily="@font/montserrat_semibold"
                 android:gravity="end"
                 android:text="Forget password ?"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                tools:layout_editor_absoluteY="1dp" />
+                tools:layout_editor_absoluteY="1dp"
+                android:textColor="#2b2b2b"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <LinearLayout
@@ -106,6 +108,7 @@
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/button"
+                android:fontFamily="@font/montserrat_semibold"
                 android:text="Login"
                 android:textColor="#fff" />
             <LinearLayout
@@ -119,6 +122,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
+                    android:textColor="#2b2b2b"
                     android:gravity="center|right"
                     android:text="Don't have an account ? " />
 
@@ -127,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif-medium"
+                    android:fontFamily="@font/montserrat_semibold"
                     android:gravity="left"
                     android:text="sign up?"
                     android:background="?android:attr/selectableItemBackground"
@@ -142,6 +146,7 @@
                 android:layout_marginVertical="10dp"
                 android:background="@drawable/button2"
                 android:text="Register"
+                android:fontFamily="@font/montserrat_semibold"
                 android:textColor="#5b5b5b" />
 
         </LinearLayout>
