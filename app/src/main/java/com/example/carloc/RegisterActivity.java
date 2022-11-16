@@ -138,8 +138,18 @@ public class RegisterActivity extends AppCompatActivity {
                                         @Override
                                         public void onComplete(@NonNull Task<Void> task) {
                                             if(task.isSuccessful()){
-                                                Toast.makeText(RegisterActivity.this , "user has been registered successfuly !" , Toast.LENGTH_LONG).show();
-
+                                                mAuth.signInWithEmailAndPassword(mail , pwd).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                                                    @Override
+                                                    public void onComplete(@NonNull Task<AuthResult> task) {
+                                                        if(task.isSuccessful()){
+                                                            Toast.makeText(RegisterActivity.this , "login with success!" , Toast.LENGTH_LONG).show();
+                                                            startActivity(new Intent(RegisterActivity.this , HomeActivity.class));
+                                                            finish();
+                                                        }else {
+                                                            Toast.makeText(RegisterActivity.this , "Failed to login ! try again !" , Toast.LENGTH_LONG).show();
+                                                        }
+                                                    }
+                                                });
                                             }else{
                                                 Toast.makeText(RegisterActivity.this , "Failed to register ! try again !" , Toast.LENGTH_LONG).show();
                                             }
@@ -189,6 +199,12 @@ public class RegisterActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
+
+    public void openHomePage (){
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+    }
+
 
     private static boolean checkString(String str) {
         char ch;

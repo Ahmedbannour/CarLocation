@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "685635114401",
-    "project_id": "carlocation-14290",
-    "storage_bucket": "carlocation-14290.appspot.com"
+    "project_number": "931988217904",
+    "firebase_url": "https://autolocation-898c9-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "autolocation-898c9",
+    "storage_bucket": "autolocation-898c9.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:685635114401:android:c75a6561c029aa111e27e0",
+        "mobilesdk_app_id": "1:931988217904:android:ece36fff7e965094348df5",
         "android_client_info": {
           "package_name": "com.example.carloc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "685635114401-u9dquht2l2fj67401biumgp57na92u0c.apps.googleusercontent.com",
+          "client_id": "931988217904-ju1ph6figdq8k0lckt9l7pn2t8ljr4gd.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAj0ACbsqgjZSsLSsQpuTlGDbKtfXKL5YE"
+          "current_key": "AIzaSyDEOTVIyrN-ewg6_WPlhcBmEjepLf1wI0M"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "685635114401-u9dquht2l2fj67401biumgp57na92u0c.apps.googleusercontent.com",
+              "client_id": "931988217904-ju1ph6figdq8k0lckt9l7pn2t8ljr4gd.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

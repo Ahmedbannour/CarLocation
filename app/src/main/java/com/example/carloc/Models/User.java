@@ -7,6 +7,7 @@ public class User {
     private  String password;
     private  String city;
     private  String  birthday ;
+    private Car[] cars;
 
     public User(int id, String username, String email, String password, String city, String birthday) {
         this.id = id;

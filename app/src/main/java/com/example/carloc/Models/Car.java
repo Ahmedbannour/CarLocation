@@ -1,11 +1,40 @@
 package com.example.carloc.Models;
 
+import java.util.Date;
+
 public class Car {
     private int id ;
     private int [] images;
     private  String label;
     private  String description;
     private  int price ;
+    private Date dateDepart;
+    private Date dateRetour;
+    private Boolean recu;
+
+    public Boolean getRecu() {
+        return recu;
+    }
+
+    public void setRecu(Boolean recu) {
+        this.recu = recu;
+    }
+
+    public Date getDateDepart() {
+        return dateDepart;
+    }
+
+    public void setDateDepart(Date dateDepart) {
+        this.dateDepart = dateDepart;
+    }
+
+    public Date getDateRetour() {
+        return dateRetour;
+    }
+
+    public void setDateRetour(Date dateRetour) {
+        this.dateRetour = dateRetour;
+    }
 
     public Car(int id, int [] images, String label, String description, int price) {
         this.id = id;
