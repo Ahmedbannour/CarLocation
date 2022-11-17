@@ -19,7 +19,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btn_register,btn_accueil,btn_login;
+    Button btn_register,btn_login;
     TextInputEditText   email , password ;
     private FirebaseAuth mAuth;
 
@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.login_page);
         btn_register = findViewById(R.id.registerLink);
         btn_login = findViewById(R.id.btn_login);
-        btn_accueil = findViewById(R.id.Accueil);
         email = findViewById(R.id.email_login);
         password = findViewById(R.id.password_login);
 
@@ -38,12 +37,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 openRegisterPage();
-            }
-        });
-        btn_accueil.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openAccueilPage();
             }
         });
         btn_login.setOnClickListener(new View.OnClickListener() {

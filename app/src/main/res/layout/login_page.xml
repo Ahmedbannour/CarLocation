@@ -29,6 +29,8 @@
             android:layout_weight="1"
             app:srcCompat="@drawable/logo1" />
 
+
+        
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
@@ -125,19 +127,9 @@
                     android:layout_marginHorizontal="10dp"
                     android:layout_weight="1"
                     android:textColor="#2b2b2b"
-                    android:gravity="center|right"
+                    android:gravity="center"
                     android:text="Don't have an account ? " />
 
-                <Button
-                    android:id="@+id/Accueil"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:fontFamily="@font/montserrat_semibold"
-                    android:gravity="left"
-                    android:text="sign up?"
-                    android:background="?android:attr/selectableItemBackground"
-                    android:textColor="#5b5b5b" />
             </LinearLayout>
 
             <Button
