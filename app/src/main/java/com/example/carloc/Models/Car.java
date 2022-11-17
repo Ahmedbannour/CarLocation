@@ -1,15 +1,15 @@
 package com.example.carloc.Models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Car {
+public class Car implements Serializable {
     private int id ;
-    private int [] images;
+    private String [] images;
     private  String label;
     private  String description;
     private  int price ;
-    private Date dateDepart;
-    private Date dateRetour;
+
     private Boolean recu;
 
     public Boolean getRecu() {
@@ -20,23 +20,9 @@ public class Car {
         this.recu = recu;
     }
 
-    public Date getDateDepart() {
-        return dateDepart;
-    }
 
-    public void setDateDepart(Date dateDepart) {
-        this.dateDepart = dateDepart;
-    }
 
-    public Date getDateRetour() {
-        return dateRetour;
-    }
-
-    public void setDateRetour(Date dateRetour) {
-        this.dateRetour = dateRetour;
-    }
-
-    public Car(int id, int [] images, String label, String description, int price) {
+    public Car(int id, String [] images, String label, String description, int price) {
         this.id = id;
         this.images = images;
         this.label = label;
@@ -52,11 +38,11 @@ public class Car {
         this.id = id;
     }
 
-    public int [] getImages() {
+    public String [] getImages() {
         return images;
     }
 
-    public void setImages(int [] images) {
+    public void setImages(String [] images) {
         this.images = images;
     }
 
